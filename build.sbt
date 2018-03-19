@@ -9,5 +9,6 @@ lazy val root = (project in file("."))
     version      in ThisBuild := "0.1.0-SNAPSHOT",
     name := "Hello",
     libraryDependencies += scalaTest % Test,
-    releaseIgnoreUntrackedFiles := true
+    releaseIgnoreUntrackedFiles := true,
+    publishTo := Some(Resolver.file("file", new File(Path.userHome.absolutePath + "/.m2/repository")))
   )
